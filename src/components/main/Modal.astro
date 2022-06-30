@@ -17,11 +17,12 @@ import { Icon } from 'astro-icon'
     <h3 class="text-black font-medium sm:text-base text-sm text-center my-4">Oferți datele de contact, sau contactați-ne
       direct</h3>
     <div class="flex flex-col gap-8">
-      <div class="flex gap-4 md:flex-row flex-col">
-        <input type="email" name="phone" id="phone" placeholder="Numărul de telefon"
+      <form id="modalForm" class="flex gap-4 md:flex-row flex-col">
+        <input type="text" name="phone" id="phone" placeholder="0..."
           class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-sm md:text-base font-medium text-[#6B7280] outline-none focus:border-black focus:shadow-md" />
-        <button class="px-4 py-2 bg-black text-white trans hover:opacity-90 rounded-md" type="submit">Trimiteți</button>
-      </div>
+        <button type="submit" class="px-4 py-2 bg-black text-white trans hover:opacity-90 rounded-md"
+          type="submit">Trimiteți</button>
+      </form>
       <div class="flex flex-col gap-2 justify-center items-center text-black text-xl">
         <a href="mailto:112@medasist.md" class="flex gap-2 items-center justify-start ">
           <span>112@medasist.md</span>
@@ -37,4 +38,5 @@ import { Icon } from 'astro-icon'
 
 <script>
   import '../scripts/hero.js';
+  import '../scripts/form.js';
 </script>
