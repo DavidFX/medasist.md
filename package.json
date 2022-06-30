@@ -9,6 +9,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
+    "@astrojs/netlify": "^0.4.7",
     "@astrojs/svelte": "^0.2.0",
     "@astrojs/tailwind": "^0.2.1",
     "@iconify/svelte": "^2.2.1",
