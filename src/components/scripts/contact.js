@@ -25,4 +25,5 @@ contactForm.addEventListener('submit', e => {
 	});
 
 	alert('Mesajul dvs a fost transmis!');
+	document.location.reload();
 });
