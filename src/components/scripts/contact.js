@@ -11,18 +11,16 @@ contactForm.addEventListener('submit', e => {
 	const email = document.getElementById('email').value;
 	let message = document.getElementById('message').value;
 
-	const time = new Date().getTime();
-
 	const fill = `~~~~~~~~~~~~~~~`;
 
 	const items = [fill, u_name, email, message];
 
-	items.forEach(item => {
-		let url = `https://api.telegram.org/bot5573330058:AAGBQGgsgXu4uWNpOQDfGQ2VIxh7CUH-XBE/sendMessage?chat_id=884422772&text=${item}`;
+	for (let i = 0; i < items.length; i++) {
+		let url = `https://api.telegram.org/bot5573330058:AAGBQGgsgXu4uWNpOQDfGQ2VIxh7CUH-XBE/sendMessage?chat_id=884422772&text=${items[i]}`;
 		const oReq = new XMLHttpRequest();
 		oReq.open('GET', url, true);
 		oReq.send();
-	});
+	}
 
 	alert('Mesajul dvs a fost transmis!');
 	document.location.reload();

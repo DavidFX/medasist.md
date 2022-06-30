@@ -9,12 +9,12 @@ modalForm.addEventListener('submit', e => {
 
 	const items = [fill, phone, message];
 
-	items.forEach(item => {
-		var url = `https://api.telegram.org/bot5573330058:AAGBQGgsgXu4uWNpOQDfGQ2VIxh7CUH-XBE/sendMessage?chat_id=884422772&text=${item}`;
-		var oReq = new XMLHttpRequest();
+	for (let i = 0; i < items.length; i++) {
+		let url = `https://api.telegram.org/bot5573330058:AAGBQGgsgXu4uWNpOQDfGQ2VIxh7CUH-XBE/sendMessage?chat_id=884422772&text=${items[i]}`;
+		const oReq = new XMLHttpRequest();
 		oReq.open('GET', url, true);
 		oReq.send();
-	});
+	}
 
 	alert('Mesajul dvs. a fost transmis!');
 
