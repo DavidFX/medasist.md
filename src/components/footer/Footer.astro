@@ -1,0 +1,28 @@
+---
+import Wave from "../main/Wave.astro";
+import { Icon } from 'astro-icon'
+---
+
+<Wave></Wave>
+
+<footer class="w-screen bg-black pb-4">
+  <div class="container mx-auto px-4 flex justify-between flex-col md:flex-row gap-4">
+    <!-- Logo Name - Copy -->
+    <div class="flex gap-2 items-center">
+      <Icon name='medasist' width={32} class='fill-white' />
+      <div class="flex flex-col text-white text-xs">
+        <p>Creat de <a href="/">Gherlovanu David</a></p>
+        <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+      </div>
+    </div>
+    <!-- Socia links -->
+    <div class="flex gap-2">
+      <a href="https://www.facebook.com/medasist.md" target="_blank" rel="noopener noreferrer">
+        <Icon name='facebook' width={32} class='fill-white' />
+      </a>
+      <a href="https://www.instagram.com/medasist.md" target="_blank" rel="noopener noreferrer">
+        <Icon name='instagram' width={32} class='fill-white' />
+      </a>
+    </div>
+  </div>
+</footer>

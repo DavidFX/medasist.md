@@ -1,0 +1,37 @@
+---
+const testimonials = [
+  {
+    name: 'Анна Андриуца',
+    text: 'Благодарю Тудора за такой важный и приятный сервис, как капельницы на дому. Особенно сейчас это так важно в этот трудный период пандемии, иметь возможность пригласить специалиста на дом. Спасибо за идею этого сервиса и за приятное обслуживание',
+    date: '2021-04-06'
+  },
+  {
+    name: 'Alexandru',
+    text: 'Sun foarte multumit, este unica echipa in Moldova la care poti apela pentru asemenea servicii. Foarte bine lucreaza, atent, curat, protejat. Multumesc. Recomand cu incredere',
+    date: '2021-03-30'
+  },
+  {
+    name: 'Rodica Valuta',
+    text: 'Multumim! Foarte receptivi si profesionisti!',
+    date: '2021-03-24'
+  },
+]
+---
+
+<section id="testimonials" class="text-black w-screen pb-24">
+  <div class="container mx-auto px-4">
+    <h2 class=" mb-12 text-3xl sm:text-2r font-bold  text-center md:text-left">Ce spun pacientii despre noi?
+    </h2>
+    <div class=" lg:grid lg:grid-cols-3 lg:gap-16 flex flex-col gap-12 lg:items-start items-center">
+      {testimonials.map(item => (
+      <div
+        class="flex text-black flex-col max-w-md cursor-default trans items-center text-center p-4 rounded-2xl bg-white bg-opacity-85 shadow-xl border-black border-[.5px] border-opacity-50">
+        <h4 class="font-bold text-lg">{item.name}</h4>
+        <p>{item.text}</p>
+        <i>{item.date}</i>
+      </div>
+      ))}
+    </div>
+  </div>
+
+</section>

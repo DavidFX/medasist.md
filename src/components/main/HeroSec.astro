@@ -1,0 +1,46 @@
+---
+import { Icon } from 'astro-icon'
+import Modal from './Modal.astro';
+---
+
+<section id="hero" class="container mx-auto sm:px-5  ">
+  <!-- !Main content -->
+  <div class="flex sm:pt-48 pt-36 w-screen h-screen px-16 ">
+    <!-- !Text Block -->
+    <div id="textBlock"
+      class="flex flex-col sm:max-w-3xl h-fit text-black space-y-4 relative md:items-start items-center">
+      <h1 class="md:text-6xl sm:text-5xl text-3xl font-popp font-bold text-center md:text-left">Experți în servicii
+        <br>medicale
+        la
+        domiciliu!
+      </h1>
+      <h2 class="md:text-2r sm:text-2xl text-xl text-center md:text-left">Oferim <br class="sm:hidden block"> serviciile
+        <span id="toType"></span>
+      </h2>
+      <button id="modalBtn" class="px-4 py-2 bg-black text-white trans hover:opacity-90 rounded-md">
+        <div class="flex space-x-2">
+          <span>Programeză Chemare</span>
+          <Icon name='fe:heart' width={24} />
+        </div>
+      </button>
+      <!-- ? -->
+      <div
+        class="opacity-75  blur-xl absolute rounded-full bg-[#1FA2FF] sm:w-96 sm:h-96 w-64 h-64 -z-50 mix-blend-multiply -right-32 -top-16 floatingBblob">
+      </div>
+      <div
+        class="opacity-75  blur-xl absolute rounded-full bg-[#12D8FA] sm:w-96 sm:h-96 w-64 h-64 -z-50 mix-blend-multiply right-0 -top-16 floatingBblob1">
+      </div>
+      <div
+        class="opacity-75  blur-xl absolute rounded-full bg-[#A6FFCB] sm:w-96 sm:h-96 w-64 h-64 -z-50 mix-blend-multiply -right-8  top-8 floatingBblob2">
+      </div>
+    </div>
+    <a href="#features">
+      <Icon name='fe:arrow-down' width={48} color='#121138'
+        class="fill-red absolute bottom-0 left-0 right-0 mx-auto mb-4 animate-bounce block" />
+    </a>
+  </div>
+</section>
+
+<script>
+  import '../scripts/hero.js';
+</script>

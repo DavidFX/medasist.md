@@ -1,0 +1,44 @@
+---
+import { Icon } from 'astro-icon'
+const features = [
+  {
+    icon: 'fe:star',
+    title: 'Intervenție operativă',
+    text: 'Intervenim rapid la solicitarea Dvs. pentru a vă asigura confortul și sănătatea',
+  },
+  {
+    icon: 'fe:check',
+    title: 'Servicii complete',
+    text: 'Propunem un pachet complet de servicii pentru toate categoriile de vârstă',
+  },
+  {
+    icon: 'fe:gear',
+    title: 'Echipament profesional',
+    text: 'Suntem dotați cu echipament profesional pentru acordarea serviciilor',
+  },
+  {
+    icon: 'fe:user-plus',
+    title: 'Personal calificat',
+    text: 'Avem în echipă doar personal calificat să acorde ajutor și servicii medicale',
+  },
+]
+---
+
+<section class='mb-24' id="features">
+  <h2 class="container px-5 mx-auto text-black text-3xl sm:text-2r font-bold my-16 text-center md:text-left ">De ce
+    trebuie să ne alegeți pe
+    noi?
+  </h2>
+  <div
+    class="flex flex-col items-center space-y-16  md:grid md:grid-cols-2 md:place-items-center md:gap-16 w-screen pb-16">
+    {features.map(feature => (
+    <div
+      class="flex text-black flex-col max-w-xs cursor-default trans items-center text-center p-4 rounded-2xl bg-white bg-opacity-85 shadow-xl border-black border-[.5px] border-opacity-50">
+      <Icon name={feature.icon} width='64' color='#121138' />
+      <h4 class="text-lg font-medium">{feature.title}</h4>
+      <p class="text-base">{feature.text}</p>
+    </div>
+    ))}
+  </div>
+
+</section>

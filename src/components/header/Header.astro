@@ -1,0 +1,71 @@
+---
+import { Icon } from 'astro-icon';
+const nav = [
+  {
+    id: 'index',
+    title: 'Principală',
+    link: "/"
+  },
+  {
+    id: 'service',
+    title: 'Servicii',
+    link: "/#services"
+  },
+  {
+    id: 'about',
+    title: 'Despre noi',
+    link: "/about"
+  },
+  {
+    id: 'contact',
+    title: 'Contacte',
+    link: "/contact"
+  }
+]
+---
+
+<header class="flex items-center container px-5 justify-between mx-auto text-black pt-5 relative">
+  <!-- !Logo -->
+  <div class="">
+    <a href="/" class="flex space-x-2 itmes-center">
+      <Icon name='medasist' width={32} class='fill-black' />
+      <span class="text-blck font-mont text-2xl font-bold">MED<span class="font-light">ASIST</span></span>
+    </a>
+  </div>
+
+  <!-- !Navigation -->
+  <nav class="space-x-5 items-center hidden font-medium lg:flex">
+    {nav.map(item => (
+    <a class="  font-display max-w-sm text-md font-bold leading-tight" href={item.link}>
+      <span class="link link-underline link-underline-black text-black">{item.title}</span>
+    </a>
+    ))}
+  </nav>
+
+  <!-- !Navigation Sidebar -->
+  <nav id="mySidenav"
+    class="h-screen w-0 fixed z-10 top-0 left-0 bg-black overflow-hidden lg:hidden flex text-center flex-col space-y-4 items-center justify-center trans">
+    <button id="closeNav" class="absolute right-3 top-3">
+      <svg aria-hidden="true" class="fill-white" width="32" height="32" preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 24 24">
+        <path fill-rule="evenodd"
+          d="M10.657 12.071L5 6.414L6.414 5l5.657 5.657L17.728 5l1.414 1.414l-5.657 5.657l5.657 5.657l-1.414 1.414l-5.657-5.657l-5.657 5.657L5 17.728z">
+        </path>
+      </svg>
+    </button>
+    {nav.map(item => (
+    <a class="text-xl text-white duration-300 trans" id={item.id} href={item.link}>{item.title}</a>
+    ))}
+  </nav>
+
+  <!-- !Burger -->
+  <button id="burgerMenu" class="fill-black lg:hidden">
+    <svg width="32" height="32" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" d="M3 16h18v2H3v-2Zm0-5h18v2H3v-2Zm0-5h18v2H3V6Z"></path>
+    </svg>
+  </button>
+</header>
+
+<script>
+  import '../scripts/navbar.js';
+</script>

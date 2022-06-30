@@ -1,0 +1,74 @@
+@tailwind utilities;
+@tailwind components;
+@tailwind base;
+
+.trans {
+	@apply transition-all duration-300 ease-in-out;
+}
+
+.text-2r {
+	@apply text-[2rem];
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+/* !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex-grow: 1;
+}
+
+/* !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Hover ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.link-underline {
+	border-bottom-width: 0;
+	background-image: linear-gradient(transparent, transparent),
+		linear-gradient(#fff, #fff);
+	background-size: 0 3px;
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 0.5s ease-in-out;
+}
+
+.link-underline-black {
+	background-image: linear-gradient(transparent, transparent),
+		linear-gradient(#121138, #121138);
+}
+
+.link-underline:hover {
+	background-size: 100% 3px;
+	background-position: 0 100%;
+}
+/* !~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.floatingBblob {
+	animation: blod 7s infinite;
+}
+.floatingBblob1 {
+	animation: blod 7s infinite 2s;
+}
+.floatingBblob2 {
+	animation: blod 7s infinite 4s;
+}
+
+@keyframes blod {
+	0% {
+		transform: translate(0px, 0px) scale(1);
+	}
+	33% {
+		transform: translate(30px, -50px) scale(1.1);
+	}
+	66% {
+		transform: translate(-20px, 20px) scale(0.9);
+	}
+	100% {
+		transform: translate(0px, 0px) scale(1);
+	}
+}

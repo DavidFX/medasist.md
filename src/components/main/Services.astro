@@ -1,0 +1,91 @@
+---
+import '../scripts/services.json'
+const services = [
+  {
+    "title": "Monitorizarea parametrilor vitali",
+    "description": "Monitorizarea parametrilor vitali: tensiunea arterială, pulsul, saturația O2, glicemia, ECG",
+    "time": "De la 50 min"
+  },
+  {
+    "title": "Administrarea injecțiilor intramusculare	",
+    "description": "Injecția intramusculară (IIM) este manevra terapeutică prin care substanțele medicamentoase sunt introduse în țesutul muscular striat",
+    "time": "De la 10 min"
+  },
+  {
+    "title": "Administrarea injecțiilor intravenoase",
+    "description": "Injecția intravenoasă reprezintă administrarea unei substanțe medicamentoase direct în sistemul vascular",
+    "time": "De la 15 min"
+  },
+  {
+    "title": "Administrarea injecțiilor subcutanata",
+    "description": "	Injecţia subcutanată este manevra prin care medicaţia este introdusă cu ajutorul unui ac ataşat la seringă in ţesutul adipos subcutanat",
+    "time": "De la 15 min"
+  },
+  {
+    "title": "Montarea sistemelor de picurat (picurători)",
+    "description": "Montarea si monitorizarea sistemelor de picurat (picurători) la domiciliul pacientului",
+    "time": "De la 30 min"
+  },
+  {
+    "title": "Colectarea analizelor la domiciliu",
+    "description": "Colectarea analizelor la domiciliu cu transportarea lor la laborator (parteneriat cu laboratorul Synevo)",
+    "time": "De la 45 min"
+  },
+  {
+    "title": "Colectarea testul SARS CoV-2",
+    "description": "Colectarea testul SARS CoV-2 și transportarea lui la laborator, si livrarea rezultatului",
+    "time": "De la 45 min"
+  }
+]
+---
+
+<section id="services" class="mb-24 ">
+  <div class="text-black flex flex-col my-16 space-y-4 px-4 container  mx-auto">
+    <h2 class="text-3xl sm:text-2r font-bold  text-center md:text-left">Ce servicii prestăm?</h2>
+    <h3 class="text-center opacity-80 md:text-left">Propunem o listă cu cele mai solicitate servicii:</h3>
+  </div>
+
+  <div class="overflow-auto">
+    <table class="w-full text-black">
+      <thead class="bg-white border-b">
+        <tr class="font-bold text-xl">
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left w-24">
+            SERVICII
+          </th>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+            DESCRIEREA
+          </th>
+          <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left w-16">
+            TIMP ESTIMAT
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {services.map(service => (
+        <tr class="bg-white border-b">
+          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+            {service.title}
+          </td>
+          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            {service.description}
+          </td>
+          <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            {service.time}
+          </td>
+        </tr>
+        ))}
+      </tbody>
+    </table>
+
+  </div>
+  <p class="text-center my-8 md:text-sm text-xs bg-black w-fit rounded-xl px-4 text-white shadow-xl mx-auto">
+    Informațiile
+    prezentate pe site-ul
+    MedAsist.md sunt cu
+    titlul
+    de prezentare. Vă
+    recomandăm să
+    concretizați la call
+    centrul informația necesară
+  </p>
+</section>

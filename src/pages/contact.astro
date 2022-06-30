@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Form from "../components/main/Form.astro";
+import { Icon } from 'astro-icon'
+
+---
+
+<Layout title="Contacte">
+  <div class="container px-4 mx-auto text-black">
+    <h1 class="md:text-6xl sm:text-5xl text-3xl font-popp font-bold text-left my-8">CUM NE PUTEȚI CONTACTA?</h1>
+    <!-- First Block -->
+    <div class="flex lg:justify-between items-center flex-col-reverse lg:flex-row gap-8">
+      <div class="flex flex-col items-start justify-center gap-4">
+        <p class="max-w-xl sm:text-2xl text-sm">Puteți utiliza metodele de contact de mai jos pentru a lua legatura cu
+          noi, sau completați
+          formularul de
+          jos, iar noi vom reveni cu un răspuns!
+        </p>
+        <div class="flex flex-col">
+          <a href="mailto:112@medasist.md" class="flex gap-2 items-center justify-start">
+            <Icon name='mail' width={32} class="fill-black" />
+            <span>112@medasist.md</span>
+          </a>
+          <a href="tel:+37368722687" class="flex gap-2 items-center justify-start">
+            <Icon name='phone' width={32} class="fill-black" />
+            <span>+37368722687</span>
+          </a>
+        </div>
+      </div>
+      <img src="/contacts.svg" alt="doctors" class="sm:max-w-xl max-w-xs">
+    </div>
+    <!-- Second Block -->
+    <div class="flex lg:justify-between items-center flex-col lg:flex-row gap-4 mt-8">
+      <img src="/email.svg" alt="doctors" class="sm:max-w-xl max-w-xs ">
+      <Form></Form>
+    </div>
+  </div>
+</Layout>
